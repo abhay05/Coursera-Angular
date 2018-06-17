@@ -39,6 +39,7 @@ function NarrowItDownController(MenuSearchService)
 		if(narrow.searchTerm==="")
 			{
 				narrow.found=[];
+				console.log(narrow.found);
       				return;
 			}
 		
