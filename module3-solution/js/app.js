@@ -38,11 +38,9 @@ function NarrowItDownController(MenuSearchService)
 	narrow.narr =function(){
 		if(narrow.searchTerm==="")
 			{
-				console.log("Enter Input");
-				return;
+      				return;
 			}
-		else
-		{
+		
 		var promise=MenuSearchService.getMatchedMenuItems(narrow.searchTerm);
 
 		promise.then(function(response){
@@ -55,7 +53,7 @@ function NarrowItDownController(MenuSearchService)
 
 			);
 
-		}
+		
 		
 		
 	};
