@@ -1,0 +1,61 @@
+<!--<div class="loader">
+	<ul ng-repeat="item in items">
+	<li>{{item}}&nbsp<button ng-click="narrow.remove();">Don't want this one!</button></li>
+	</ul>-->
+<div class="loader" ></div>
+<div style="display:block;position:absolute;top:200px;">
+<div ng-if="list.items.length===0">Nothing Found</div>
+	<table style="border-width: 1px;padding: 5px;">
+	<thead>
+	<th>
+	Short Name
+	</th>
+
+	<th>
+	Name
+	</th>
+
+	<th>
+	Description
+	</th>
+
+	<th>
+	Remove
+	</th>
+
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in list.items">
+	<td>
+	{{item.short_name}}
+	</td>
+
+	<td>
+	{{item.name}}
+	</td>
+
+	<td>
+	{{item.description}}
+	</td>
+
+	<td>
+	<button ng-click="list.remove({index:$index});">Don't  want this one!</button>
+	</td>
+
+	</tr>
+	</tbody>
+	</table>
+
+</div>
+
+<!--
+
+<h1>Result</h1>
+<div ng-if="list.isEmpty()">Nothing found</div>
+<ul>
+  <li ng-repeat="item in list.items">
+    {{item.name}}, {{item.short_name}}, {{item.description}}
+    <button ng-click="list.remove({index: $index});">Don't want this one!</button>
+  </li>
+</ul>
+-->
