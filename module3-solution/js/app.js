@@ -34,10 +34,11 @@ function NarrowItDownController(MenuSearchService)
 {
 	var narrow=this;
 	narrow.searchTerm="";
-	narrow.found=[];
+	
 	narrow.narr =function(){
 		if(narrow.searchTerm==="")
 			{
+				narrow.found=[];
       				return;
 			}
 		
